@@ -4,7 +4,10 @@
     <canvas v-if="mode=='DRAW'" id="canvas" ref="canvasBoard" class="triggerGPU"
             @mousedown="captureOn"
             @mousemove="captureMove"
-            @mouseup="captureOff">
+            @mouseup="captureOff"
+            @touchstart="captureOn"
+            @touchmove="captureMove"
+            @touchend="captureOff">
             Canvas not available.
     </canvas>
     <canvas v-else id="canvasStatic" ref="canvasBoardStatic" class="triggerGPU">
